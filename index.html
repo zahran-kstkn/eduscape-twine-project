@@ -125,98 +125,302 @@
 /* Color codes to help players parse the intent of the action */
 .choice-box.danger tw-link { background: #ffebe6 !important; color: #de350b !important; }
 .choice-box.safe tw-link { background: #e6f4ea !important; color: #137333 !important; }
-.choice-box.report tw-link { background: #f1f3f4 !important; color: #202124 !important; }</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Main Menu" tags="" position="500,175" size="100,100"># CYBER ESCAPE: The Digital Trap
+.choice-box.report tw-link { background: #f1f3f4 !important; color: #202124 !important; }</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Main Menu" tags="" position="500,175" size="100,100"># (if: $lang is &quot;id&quot;)[CYBER ESCAPE: Perangkap Digital](else:)[CYBER ESCAPE: The Digital Trap]
 
-Welcome to the Cybersecurity Training Simulation. Choose an option below to begin:
+(if: $lang is &quot;id&quot;)[
+  Selamat datang di Simulasi Edukasi Cybersecurity. Pilih menu di bawah untuk memulai:
 
-* [[Select a Case (Level)-&gt;Cases]]
-* [[Game Settings-&gt;Settings]]
-* [[Achievements-&gt;Achievements]]</tw-passagedata><tw-passagedata pid="2" name="Cases" tags="" position="375,300" size="100,100">## Select a Case File
+  * [[Pilih Kasus (Level)-&gt;Cases]]
+  * [[Pengaturan Game-&gt;Settings]]
+  * [[Pencapaian (Achievements)-&gt;Achievements]]
+](else:)[
+  Welcome to the Cybersecurity Training Simulation. Choose an option below to begin:
 
-Choose a scenario to investigate and escape. Each case is based on real-world tactics.
+  * [[Select a Case (Level)-&gt;Cases]]
+  * [[Game Settings-&gt;Settings]]
+  * [[Achievements-&gt;Achievements]]
+]</tw-passagedata><tw-passagedata pid="2" name="Cases" tags="" position="275,250" size="100,100">(if: $lang is 0)[(set: $lang to &quot;id&quot;)]
 
-### [Case 1: The Urgent Invoice]
-An urgent email from the &quot;CEO&quot; just hit your inbox demanding an immediate wire transfer. Can you spot the spear-phishing indicators before you compromise the company network?
+(if: $lang is &quot;id&quot;)[
+## Pilih Kasus Simulasi
+
+Pilih salah satu skenario kejahatan siber di bawah ini. Skenario ini diangkat dari kejadian nyata yang paling sering menimpa remaja di internet saat ini.
+
+### 📱 Kasus 1: Rezeki Nomplok Misterius
+Menerima SMS tidak dikenal yang menyatakan kamu memenangkan hadiah puluhan juta rupiah. Apakah ini keberuntungan asli atau jebakan phishing?
+*  [[Mulai Kasus 1-&gt;Case 1 Intro]]
+
+### 🎮 Kasus 2: Top-Up Game Murah &amp; APK Palsu
+*(Segera Hadir)* - Tergiur diamond/item game murah atau aplikasi mod premium gratis yang ternyata mengharuskan kamu mendownload file APK berbahaya.
+
+### 💬 Kasus 3: Pembajakan Akun &amp; Sosmed Engineering
+*(Segera Hadir)* - Akun teman dekatmu dibajak, lalu dia mengirim chat darurat meminta nomor WA atau kode verifikasi (OTP) yang masuk ke HP-mu.
+
+### 💰 Kasus 4: Tugas Berbayar &amp; Lowongan Remaja
+*(Segera Hadir)* - Ditawari uang saku tambahan hanya dengan nge-like video atau subscribe channel, yang berujung pada pemerasan berkedok &quot;uang deposit&quot;.
+
+### 💻 Kasus 5: Cheat Game Berhadiah Malware
+*(Segera Hadir)* - Mengunduh software cheat atau mod gratis untuk menembus game favoritmu, tanpa tahu sistem keamanan komputermu sedang dihancurkan di latar belakang.
+
+---
+[[&lt;- Kembali ke Menu Utama-&gt;Main Menu]]
+]
+
+(if: $lang is &quot;en&quot;)[
+## Select a Simulation Case
+
+Choose a cyber threat scenario below. These simulations are based on real-world scams that frequently target teenagers online today.
+
+### 📱 Case 1: The Mystery Jackpot
+You receive an anonymous text claiming you won a massive lottery pool. Is it pure luck, or a dangerous phishing setup?
 * [[Begin Case 1-&gt;Case 1 Intro]]
 
-### [Case 2: The Malicious USB]
-You found a branded USB drive in the office parking lot labeled &quot;Q4 Layoff Strategy.&quot; Curiosity is a vulnerability. Will you plug it in?
-* [[Begin Case 2-&gt;Case 2 Intro]]
+### 🎮 Case 2: Cheap Game Top-Ups &amp; Fake APKs
+*(Coming Soon)* - Falling for heavily discounted gaming currencies or premium app mods that force you to install dangerous, hidden background tools.
+
+### 💬 Case 3: Account Hijacking &amp; Social Engineering
+*(Coming Soon)* - A close friend&#39;s profile gets hacked, and they send you an urgent chat begging for your phone number or an active verification code (OTP).
+
+### 💰 Case 4: Paid Tasks &amp; Online &quot;Teen Jobs&quot;
+*(Coming Soon)* - Offered easy pocket money just for liking short videos or subscribing to channels, which slowly spirals into deposit fraud.
+
+### 💻 Case 5: Game Cheats &amp; Hidden Malware
+*(Coming Soon)* - Downloading custom cheat clients or aimbots to dominate your favorite PC titles, completely unaware your computer&#39;s storage is being ransomed.
 
 ---
-[[&lt;- Back to Main Menu-&gt;Main Menu]]</tw-passagedata><tw-passagedata pid="3" name="Settings" tags="" position="500,300" size="100,100">## Game Settings
+[[&lt;- Back to Main Menu-&gt;Main Menu]]
+]</tw-passagedata><tw-passagedata pid="3" name="Settings" tags="" position="500,300" size="100,100">(if: $lang is 0)[(set: $lang to &quot;id&quot;)]\
+\(if: $lang is &quot;id&quot;)[## Pengaturan Game
 
-Adjust your simulation preferences below:
+Pilih bahasa pengantar simulasi:]\
+\(if: $lang is &quot;en&quot;)[## Game Settings
 
-### Text Display
-* (click: &quot;Large Text&quot;)[&lt;script&gt;$(&#39;tw-story&#39;).css(&#39;font-size&#39;, &#39;1.5em&#39;);&lt;/script&gt;] Large Text
-* (click: &quot;Normal Text&quot;)[&lt;script&gt;$(&#39;tw-story&#39;).css(&#39;font-size&#39;, &#39;1em&#39;);&lt;/script&gt;] Normal Text
+Choose your preferred simulation language:]
 
----
-[[&lt;- Back to Main Menu-&gt;Main Menu]]</tw-passagedata><tw-passagedata pid="4" name="Achievements" tags="" position="625,300" size="100,100">## Unlocked Achievements
-
-Your completed field badges will appear here once you successfully navigate the scenarios.
-
-*No achievements unlocked yet.*
+* (link: &quot;🇮🇩 Bahasa Indonesia&quot;)[(set: $lang to &quot;id&quot;)(goto: &quot;Settings&quot;)]
+* (link: &quot;🇺🇸 English&quot;)[(set: $lang to &quot;en&quot;)(goto: &quot;Settings&quot;)]
 
 ---
-[[&lt;- Back to Main Menu-&gt;Main Menu]]</tw-passagedata><tw-passagedata pid="5" name="Case 1 Intro" tags="" position="300,425" size="100,100">&lt;!-- 1. INTROTEXT: Sets the scene before the player sees the phone --&gt;
-&lt;div class=&quot;game-narrative&quot;&gt;
-  &lt;h2&gt;Case 1: The Midnight Alert&lt;/h2&gt;
-  
-  &lt;p&gt;It&#39;s 11:42 PM. You&#39;re finally about to close your laptop and go to sleep when your smartphone loudly buzzes on the nightstand. Your heart drops slightly—emergency texts at this hour are rarely good news.&lt;/p&gt;
-  
-  &lt;p&gt;You pick up the device, slide your thumb to unlock it, and a text message from an unknown number fills the screen. It looks like a critical warning from your bank.&lt;/p&gt;
+(if: $lang is &quot;id&quot;)[[&lt;- Kembali ke Menu Utama-&gt;Main Menu]]\
+(if: $lang is &quot;en&quot;)[[&lt;- Back to Main Menu-&gt;Main Menu]]</tw-passagedata><tw-passagedata pid="4" name="Achievements" tags="" position="625,300" size="100,100">##  (if: $lang is &quot;id&quot;)[Achievement terbuka](else:)[Unlocked Achievements]
+
+ (if: $lang is &quot;id&quot;)[ Achievement yang sudah di buka akan muncul disini sehabis kamu menyelesaikan scenario](else:) [Your completed field badges will appear here once you successfully navigate the scenarios].
+
+(if: $lang is &quot;id&quot;) [Tidak ada achievement yang terbuka.] (else:) [*No achievements unlocked yet.*]
+
+---
+(if: $lang is &quot;id&quot;)
+[[[&lt;- Kembali Ke Menu Utama-&gt;Main Menu]]] 
+(else:) 
+[[[&lt;- Back to Main Menu-&gt;Main Menu]]]</tw-passagedata><tw-passagedata pid="5" name="Case 1 Intro" tags="" position="225,425" size="100,100">&lt;div class=&quot;game-narrative&quot;&gt;
+  (if: $lang is &quot;id&quot;)[
+    &lt;h2&gt;Kasus 1: Rezeki Nomplok Misterius&lt;/h2&gt;
+    &lt;p&gt;Kamu baru saja pulang sekolah, melempar tas ke kasur, dan berniat mabar (main bareng) game di HP. Tiba-tiba, sebuah SMS masuk dari nomor tidak dikenal.&lt;/p&gt;
+  ](else:)[
+    &lt;h2&gt;Case 1: The Mystery Jackpot&lt;/h2&gt;
+    &lt;p&gt;You just got home from school, tossed your backpack onto your bed, and are about to log into a mobile game. Suddenly, an SMS chimes from an unknown mobile number.&lt;/p&gt;
+  ]
 &lt;/div&gt;
 
-&lt;!-- 2. THE VISUAL PHONE: Shows the evidence the player needs to analyze --&gt;
 &lt;div class=&quot;phone-container&quot;&gt;
   &lt;div class=&quot;smartphone&quot;&gt;
     &lt;div class=&quot;phone-screen&quot;&gt;
-      
-      &lt;!-- Status Bar --&gt;
-      &lt;div class=&quot;status-bar&quot;&gt;
-        &lt;span&gt;📶 5G&lt;/span&gt;
-        &lt;span&gt;11:42 PM&lt;/span&gt;
-        &lt;span&gt;🔋 19%&lt;/span&gt;
-      &lt;/div&gt;
-      
-      &lt;!-- App Header --&gt;
-      &lt;div class=&quot;app-header&quot;&gt;
-        &lt;div class=&quot;back-arrow&quot;&gt;◀ Messages&lt;/div&gt;
-      &lt;/div&gt;
-      
-      &lt;!-- Message Thread --&gt;
+      &lt;div class=&quot;status-bar&quot;&gt;&lt;span&gt;📶 4G&lt;/span&gt; &lt;span&gt;4:15 PM&lt;/span&gt; &lt;span&gt;🔋 92%&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;app-header&quot;&gt;&lt;div class=&quot;back-arrow&quot;&gt;◀ SMS&lt;/div&gt;&lt;/div&gt;
       &lt;div class=&quot;message-thread&quot;&gt;
-        &lt;div class=&quot;timestamp&quot;&gt;Today • 11:42 PM&lt;/div&gt;
-        
+        &lt;div class=&quot;timestamp&quot;&gt;Today&lt;/div&gt;
         &lt;div class=&quot;message received&quot;&gt;
-          &lt;p&gt;⚠️ BANK ALERT: Unusual login attempt detected. If this was not you, instantly secure your account by verifying your identity here: &lt;span class=&quot;mock-link&quot;&gt;https://secure-chase-update.net/login-portal&lt;/span&gt;&lt;/p&gt;
+          (if: $lang is &quot;id&quot;)[
+            &lt;p&gt;⚠️ SELAMAT! Nomor HP Anda terpilih mendapatkan HADIAH JACKPOT Rp 50.000.000 dari undian kupon Shopee/Telkomsel 2026! Cairkan dana Anda segera di: &lt;span class=&quot;mock-link&quot;&gt;http://bisa-jp-dana-undian99.com&lt;/span&gt;&lt;/p&gt;
+          ](else:)[
+            &lt;p&gt;⚠️ CONGRATULATIONS! Your mobile number has been selected to win a JACKPOT PRIZE of $5,000 from the 2026 Shopee/Telkomsel lucky draw! Claim your funds instantly at: &lt;span class=&quot;mock-link&quot;&gt;http://bisa-jp-dana-undian99.com&lt;/span&gt;&lt;/p&gt;
+          ]
         &lt;/div&gt;
       &lt;/div&gt;
-
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;!-- 3. THE CHOICES: Now the player has context to make a reasoned decision --&gt;
 &lt;div class=&quot;choice-container&quot;&gt;
-  &lt;p class=&quot;choice-prompt&quot;&gt;Look closely at the text message above. Panic is starting to set in, but your cybersecurity training kicks in. What do you do?&lt;/p&gt;
+  &lt;!-- Emergency backup: If the game doesn&#39;t know the language yet, default to Indonesian --&gt;
+  (if: $lang is 0)[(set: $lang to &quot;id&quot;)]\
+  
+  &lt;p class=&quot;choice-prompt&quot;&gt;
+    (if: $lang is &quot;id&quot;)[Uang Rp 50 juta bisa buat beli laptop baru dan top-up skin game impianmu. Apa tindakanmu?]\
+    (if: $lang is &quot;en&quot;)[That cash could buy a brand new laptop and all the gaming skins you&#39;ve ever wanted. What do you do?]\
+  &lt;/p&gt;
   
   &lt;div class=&quot;game-choices&quot;&gt;
+    &lt;div class=&quot;choice-box report&quot;&gt;
+      (if: $lang is &quot;id&quot;)[[👉 Abaikan &amp; hapus pesan tersebut -&gt; Case 1 Ignore]]\
+      (if: $lang is &quot;en&quot;)[[👉 Ignore &amp; delete the message -&gt; Case 1 Ignore]]
+    &lt;/div&gt;
+    
     &lt;div class=&quot;choice-box danger&quot;&gt;
-      [[👉 Trust the alert: Tap the link directly on the phone screen to log in and protect your funds. -&gt; Click Link Trap]]
+      (if: $lang is &quot;id&quot;)[[👉 Klik linknya untuk melihat syarat pencairan -&gt; Case 1 Phishing Page]]\
+      (if: $lang is &quot;en&quot;)[[👉 Click the link to view the requirements -&gt; Case 1 Phishing Page]]
     &lt;/div&gt;
     
     &lt;div class=&quot;choice-box safe&quot;&gt;
-      [[🔍 Be cautious: Close the messaging app, open your phone&#39;s web browser, and go directly to your official bank bookmark. -&gt; Go Manual]]
-    &lt;/div&gt;
-    
-    &lt;div class=&quot;choice-box report&quot;&gt;
-      [[🚩 Spot the red flags: The URL looks fake. Report the number as a scam and block it. -&gt; Report Scam]]
+      (if: $lang is &quot;id&quot;)[[👉 Periksa dan verifikasi linknya terlebih dahulu -&gt; Case 1 Verify]]\
+      (if: $lang is &quot;en&quot;)[[👉 Verify and inspect the link first -&gt; Case 1 Verify]]
     &lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="6" name="Case 2 Intro" tags="" position="437.5,425" size="100,100"></tw-passagedata><tw-passagedata pid="7" name=" Click Link Trap" tags="" position="175,550" size="100,100"></tw-passagedata><tw-passagedata pid="8" name=" Go Manual" tags="" position="300,550" size="100,100"></tw-passagedata><tw-passagedata pid="9" name=" Report Scam" tags="" position="425,550" size="100,100"></tw-passagedata></tw-storydata>
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="6" name=" Case 1 Ignore" tags="" position="75,525" size="100,100">(if: $lang is 0)[(set: $lang to &quot;id&quot;)]\
+(if: $lang is &quot;id&quot;)[
+## Keputusan Tepat! (Abaikan)
+
+Kamu memilih untuk tidak memedulikan SMS tersebut dan langsung menghapusnya. Ini adalah langkah terbaik untuk melindungi diri.
+
+&gt; ### 🧠 Psikologi di Balik Scam Jackpot
+&gt; * **Keserakahan &amp; FOMO (Fear of Missing Out):** Penipu menggunakan iming-iming uang gratis dalam jumlah besar agar targetnya merasa senang secara instan dan tidak berpikir jernih.
+&gt; * **Urgensi Palsu:** Kata-kata seperti &quot;Segera&quot; atau &quot;Batas Waktu&quot; dirancang agar kamu panik dan bertindak cepat tanpa sempat bertanya kepada orang tua atau guru.
+
+Remaja adalah target empuk karena biasanya sangat menginginkan uang jajan tambahan untuk hobi mereka, sehingga sering kali melupakan logika dasar keselamatan internet.
+
+---
+[[&lt;- Kembali ke Menu Utama-&gt;Main Menu]]
+]\
+(if: $lang is &quot;en&quot;)[
+## Smart Move! (Ignored)
+
+You chose to pay no attention to the SMS and immediately deleted it. This is the absolute best way to defend your digital footprint.
+
+&gt; ### 🧠 The Psychology Behind Jackpot Scams
+&gt; * **Greed &amp; FOMO (Fear of Missing Out):** Scammers use the promise of massive free cash to trigger an instant dopamine rush, blinding your logical judgment.
+&gt; * **Artificial Urgency:** Words like &quot;Instantly&quot; or &quot;Act Now&quot; are designed to make you panic and move fast before you think to ask a parent or a teacher.
+
+High schoolers are prime targets because they often want extra spending money for hobbies or games, making them more likely to bypass basic internet safety guidelines.
+
+---
+[[&lt;- Back to Main Menu-&gt;Main Menu]]
+]</tw-passagedata><tw-passagedata pid="7" name=" Case 1 Phishing Page" tags="" position="200,550" size="100,100">&lt;div class=&quot;game-narrative&quot;&gt;
+  (if: $lang is &quot;id&quot;)[
+    &lt;h3&gt;🌐 Membuka Browser...&lt;/h3&gt;
+    &lt;p&gt;Kamu mengklik link tersebut. Browser HP-mu membuka sebuah situs web yang sekilas terlihat resmi dengan logo bank besar. Di halaman utama, terdapat formulir pencairan hadiah yang meminta data berikut:&lt;/p&gt;
+  ](else:)[
+    &lt;h3&gt;🌐 Opening Browser...&lt;/h3&gt;
+    &lt;p&gt;You tap the link. Your phone&#39;s browser loads a website that looks deceptively official, complete with real bank logos. The main page displays a prize payout form requesting the following:&lt;/p&gt;
+  ]
+&lt;/div&gt;
+
+&lt;div class=&quot;phishing-box&quot; style=&quot;background: #fff; color: #000; padding: 20px; border-radius: 8px; border: 2px dashed red; font-family: sans-serif;&quot;&gt;
+  &lt;h4 style=&quot;margin-top:0; color: red;&quot;&gt;FORMULIR VERIFIKASI PEMENANG / WINNER VERIFICATION FORM&lt;/h4&gt;
+  &lt;label&gt;💳 Nomor Kartu Kredit / Debit:&lt;/label&gt;&lt;br&gt;&lt;input type=&quot;text&quot; placeholder=&quot;xxxx-xxxx-xxxx-xxxx&quot; disabled&gt;&lt;br&gt;&lt;br&gt;
+  &lt;label&gt;🪪 Nomor KTP (NIK):&lt;/label&gt;&lt;br&gt;&lt;input type=&quot;text&quot; placeholder=&quot;3273xxxxxxxxxxxx&quot; disabled&gt;&lt;br&gt;&lt;br&gt;
+  &lt;label&gt;👩 Nama Ibu Kandung (Maiden Name):&lt;/label&gt;&lt;br&gt;&lt;input type=&quot;text&quot; placeholder=&quot;Nama lengkap...&quot; disabled&gt;&lt;br&gt;
+&lt;/div&gt;
+
+&lt;br&gt;
+&lt;div class=&quot;choice-container&quot;&gt;
+  (if: $lang is 0)[(set: $lang to &quot;id&quot;)]\
+  &lt;div class=&quot;game-choices&quot;&gt;
+    &lt;div class=&quot;choice-box safe&quot;&gt;
+      (if: $lang is &quot;id&quot;)[[👉 Tunggu dulu, ini mencurigakan. Tutup browser dan keluar! -&gt; Case 1 Back Out]]\
+      (if: $lang is &quot;en&quot;)[[👉 Wait, this is creepy. Close the tab and back out! -&gt; Case 1 Back Out]]
+    &lt;/div&gt;
+    
+    &lt;div class=&quot;choice-box danger&quot;&gt;
+      (if: $lang is &quot;id&quot;)[[👉 Isi data dengan lengkap demi mencairkan Rp 50 juta -&gt; Case 1 Submit Info]]\
+      (if: $lang is &quot;en&quot;)[[👉 Fill in the data completely to claim the prize -&gt; Case 1 Submit Info]]
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="8" name=" Case 1 Verify" tags="" position="425,550" size="100,100">## (if: $lang is &quot;id&quot;)[🔍 Melakukan Inspeksi Link](else:)[🔍 Inspecting the Connection Elements]
+
+(if: $lang is &quot;id&quot;)[
+  &lt;p&gt;Kamu menahan diri dan meneliti alamat linknya: &lt;code&gt;http://bisa-jp-dana-undian99.com&lt;/code&gt;.&lt;/p&gt;
+  
+  &lt;p&gt;Kamu menyadari beberapa kejanggalan penting:&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Situs ini menggunakan protokol lama &lt;code&gt;http&lt;/code&gt;, bukan &lt;code&gt;https&lt;/code&gt; (tanpa logo gembok aman).&lt;/li&gt;
+    &lt;li&gt;Alamat domainnya sangat berantakan dan menggunakan penyedia domain gratis/murahan, bukan situs resmi instansi terkait.&lt;/li&gt;
+  &lt;/ul&gt;
+  
+  &lt;p&gt;Sekarang kamu 100% yakin ini adalah perangkap kejahatan siber.&lt;/p&gt;
+](else:)[
+  &lt;p&gt;You pause and look directly at the URL path structure: &lt;code&gt;http://bisa-jp-dana-undian99.com&lt;/code&gt;.&lt;/p&gt;
+  
+  &lt;p&gt;You identify crucial red flags instantly:&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;The page uses an insecure &lt;code&gt;http&lt;/code&gt; protocol instead of encrypted &lt;code&gt;https&lt;/code&gt;.&lt;/li&gt;
+    &lt;li&gt;The domain name is messy and hosted on a cheap extension, completely independent of official company infrastructures.&lt;/li&gt;
+  &lt;/ul&gt;
+  
+  &lt;p&gt;You are now 100% certain this is a cyber threat.&lt;/p&gt;
+]
+---
+&lt;div class=&quot;choice-container&quot;&gt;
+  (if: $lang is 0)[(set: $lang to &quot;id&quot;)]\
+  &lt;div class=&quot;game-choices&quot;&gt;
+    &lt;div class=&quot;choice-box safe&quot;&gt;
+      (if: $lang is &quot;id&quot;)[[👉 Gunakan pengetahuan ini untuk mengabaikan pesan dengan aman -&gt; Case 1 Ignore]]\
+      (if: $lang is &quot;en&quot;)[[👉 Use this insight to safely ignore the threat -&gt; Case 1 Ignore]]
+    &lt;/div&gt;
+    
+    &lt;div class=&quot;choice-box danger&quot;&gt;
+      (if: $lang is &quot;id&quot;)[[👉 Penasaran, tetap klik linknya walau tahu ini palsu -&gt; Case 1 Phishing Page]]\
+      (if: $lang is &quot;en&quot;)[[👉 Curious anyway: click the link just to see what happens -&gt; Case 1 Phishing Page]]
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="9" name="User Init" tags="" position="650,175" size="100,100">(set: $lang to &quot;id&quot;)</tw-passagedata><tw-passagedata pid="10" name=" Case 1 Back Out" tags="" position="175,700" size="100,100">(if: $lang is 0)[(set: $lang to &quot;id&quot;)]\
+(if: $lang is &quot;id&quot;)[
+## Selamat, Kamu Lolos dari Jebakan!
+
+Keputusanmu untuk langsung menutup halaman tersebut sangat tepat! Mengapa data-data tadi sangat berbahaya jika disebarkan?
+
+&gt; ### 🛑 Kenapa Tiga Data Ini Sangat Rahasia?
+&gt; * **Nomor KTP (NIK):** Bisa disalahgunakan penipu untuk mendaftar **Pinjaman Online (Pinjol) Ilegal** atas namamu. Kamu tidak menerima uangnya, tapi tiba-tiba ditagih hutang jutaan rupiah!
+&gt; * **Nama Ibu Kandung:** Ini adalah pertanyaan verifikasi keamanan paling krusial hampir di seluruh sistem perbankan. Jika penipu tahu nama ibu kandungmu, mereka bisa membobol akun bank aslimu melalui customer service.
+
+Ingat: Jangan pernah memberikan informasi sensitif ini ke situs web mana pun yang tidak menggunakan domain resmi pemerintah/perusahaan (seperti `.go.id` atau situs resmi bank terverifikasi).
+
+---
+[[&lt;- Kembali ke Menu Utama-&gt;Main Menu]]
+]\
+(if: $lang is &quot;en&quot;)[
+## Whew! You Escaped the Trap!
+
+Your decision to instantly slam the browser tab shut saved you! Why are those specific inputs so incredibly dangerous to share?
+
+&gt; ### 🛑 Why These Three Data Points Are Heavily Guarded:
+&gt; * **National Identity Numbers (KTP/SSN):** Scammers use this to perform identity theft, such as applying for **illegal online loans** under your name. You get zero money, but end up with massive debt.
+&gt; * **Mother&#39;s Maiden Name:** This is the ultimate security verification bypass used by financial institutions. If a hacker knows this, they can impersonate you to reset bank passwords via customer support.
+
+Rule of thumb: Never supply these private records to dubious web domains that lack secure protocols or official enterprise structures.
+
+---
+[[&lt;- Back to Main Menu-&gt;Main Menu]]
+]</tw-passagedata><tw-passagedata pid="11" name=" Case 1 Submit Info" tags="" position="300,675" size="100,100">(if: $lang is 0)[(set: $lang to &quot;id&quot;)]\
+(if: $lang is &quot;id&quot;)[
+## 🔴 UANG KAMU DICURI!
+
+Kamu mengetik data tersebut lalu menekan tombol submit. Layar HP berkedip merah dengan tulisan &quot;Error 404&quot;. Tidak ada hadiah yang masuk.
+
+Dua jam kemudian, orang tuamu panik karena saldo rekening bank mereka tiba-tiba terkuras habis, dan identitas KTP-mu terdaftar di aplikasi pinjol ilegal. Ini adalah konsekuensi fatal dari serangan **Phishing**.
+
+&gt; ### 🚨 Apa yang Harus Dilakukan Jika Ini Terjadi di Dunia Nyata?
+&gt; 1. **Hubungi Bank Segera:** Blokir semua rekening kartu debit/kredit yang datanya sempat kamu masukkan agar saldo tidak terus dikuras.
+&gt; 2. **Laporkan Penyalahgunaan Data:** Buat laporan ke pihak berwajib atau melalui portal resmi pengaduan siber pemerintah seperti [patrolisiber.id](https://www.patrolisiber.id).
+&gt; 3. **Ganti Password:** Segera ganti semua password email dan akun media sosial yang terhubung dengan HP-mu.
+
+---
+[[&lt;- Kembali ke Menu Utama-&gt;Main Menu]]
+]\
+(if: $lang is &quot;en&quot;)[
+## 🔴 FINANCIAL IDENTITY COMPROMISED!
+
+You submitted your data. The screen flashes a generic error page. No jackpot arrives.
+
+A few hours later, your family realizes their bank accounts linked to that identity profiles are locked out or completely drained. Your info has been auctioned off on the dark web. This is the heavy price of falling for a **Phishing** trap.
+
+&gt; ### 🚨 Emergency Action Steps For Real Life:
+&gt; 1. **Freeze Accounts Instantly:** Call the financial provider immediately to terminate any active cards or digital banking credentials that were compromised.
+&gt; 2. **Report Identity Theft:** Inform cyber authorities through government reporting channels to flag your identity documents as stolen.
+&gt; 3. **Update Credentials:** Overhaul your passwords across all security nodes immediately.
+
+---
+[[&lt;- Back to Main Menu-&gt;Main Menu]]
+]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
