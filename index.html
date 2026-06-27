@@ -139,7 +139,7 @@
   * [[Select a Case (Level)-&gt;Cases]]
   * [[Game Settings-&gt;Settings]]
   * [[Achievements-&gt;Achievements]]
-]</tw-passagedata><tw-passagedata pid="2" name="Cases" tags="" position="275,250" size="100,100">(if: $lang is 0)[(set: $lang to &quot;id&quot;)]
+]</tw-passagedata><tw-passagedata pid="2" name="Cases" tags="" position="550,425" size="100,100">(if: $lang is 0)[(set: $lang to &quot;id&quot;)]
 
 (if: $lang is &quot;id&quot;)[
 ## Pilih Kasus Simulasi
@@ -151,8 +151,8 @@ Menerima SMS tidak dikenal yang menyatakan kamu memenangkan hadiah puluhan juta 
 *  [[Mulai Kasus 1-&gt;Case 1 Intro]]
 
 ### 🎮 Kasus 2: Top-Up Game Murah &amp; APK Palsu
-*(Segera Hadir)* - Tergiur diamond/item game murah atau aplikasi mod premium gratis yang ternyata mengharuskan kamu mendownload file APK berbahaya.
-
+Tergiur penawaran diamond game gratis, kamu diarahkan ke sebuah situs web untuk mengunduh aplikasi mencurigakan.
+* [[Mulai Kasus 2 -&gt; Case 2 Intro]]
 ### 💬 Kasus 3: Pembajakan Akun &amp; Sosmed Engineering
 *(Segera Hadir)* - Akun teman dekatmu dibajak, lalu dia mengirim chat darurat meminta nomor WA atau kode verifikasi (OTP) yang masuk ke HP-mu.
 
@@ -176,7 +176,8 @@ You receive an anonymous text claiming you won a massive lottery pool. Is it pur
 * [[Begin Case 1-&gt;Case 1 Intro]]
 
 ### 🎮 Case 2: Cheap Game Top-Ups &amp; Fake APKs
-*(Coming Soon)* - Falling for heavily discounted gaming currencies or premium app mods that force you to install dangerous, hidden background tools.
+Tempted by a free diamond generator, you are directed to a shady website to download a highly suspicious app.
+* [[Begin Case 2 -&gt; Case 2 Intro]]
 
 ### 💬 Case 3: Account Hijacking &amp; Social Engineering
 *(Coming Soon)* - A close friend&#39;s profile gets hacked, and they send you an urgent chat begging for your phone number or an active verification code (OTP).
@@ -202,17 +203,73 @@ Choose your preferred simulation language:]
 
 ---
 (if: $lang is &quot;id&quot;)[[&lt;- Kembali ke Menu Utama-&gt;Main Menu]]\
-(if: $lang is &quot;en&quot;)[[&lt;- Back to Main Menu-&gt;Main Menu]]</tw-passagedata><tw-passagedata pid="4" name="Achievements" tags="" position="625,300" size="100,100">##  (if: $lang is &quot;id&quot;)[Achievement terbuka](else:)[Unlocked Achievements]
+(if: $lang is &quot;en&quot;)[[&lt;- Back to Main Menu-&gt;Main Menu]]</tw-passagedata><tw-passagedata pid="4" name="Achievements" tags="" position="625,300" size="100,100">(if: $lang is 0)[(set: $lang to &quot;id&quot;)]
 
- (if: $lang is &quot;id&quot;)[ Achievement yang sudah di buka akan muncul disini sehabis kamu menyelesaikan scenario](else:) [Your completed field badges will appear here once you successfully navigate the scenarios].
+(if: $lang is &quot;id&quot;)[
+## 🏆 Pencapaian (Achievements)
 
-(if: $lang is &quot;id&quot;) [Tidak ada achievement yang terbuka.] (else:) [*No achievements unlocked yet.*]
+Berikut adalah lencana pencapaian yang berhasil kamu kumpulkan selama simulasi. Jelajahi berbagai pilihan di setiap kasus untuk menemukan rahasia tersembunyi!
 
 ---
-(if: $lang is &quot;id&quot;)
-[[[&lt;- Kembali Ke Menu Utama-&gt;Main Menu]]] 
-(else:) 
-[[[&lt;- Back to Main Menu-&gt;Main Menu]]]</tw-passagedata><tw-passagedata pid="5" name="Case 1 Intro" tags="" position="225,425" size="100,100">&lt;div class=&quot;game-narrative&quot;&gt;
+
+(if: $achieve_yt is true)[
+&lt;div style=&quot;background:#d4edda; color:#155724; padding:15px; border-radius:8px; border:2px solid #c3e6cb; margin-bottom:10px;&quot;&gt;
+  &lt;h3&gt;🏆 [Hidden YouTube Video]&lt;/h3&gt;
+  &lt;p&gt;*Berhasil membongkar jaringan bot komentar di YouTube.*&lt;/p&gt;
+  
+  &lt;hr style=&quot;border: 0; border-top: 1px dashed #155724;&quot;&gt;
+  
+  &lt;h4&gt;💡 Fakta Unik: Bagaimana Bot Komentar Mengelabui Kita?&lt;/h4&gt;
+  &lt;ul&gt;
+    &lt;li&gt;**Manipulasi Psikologi (Social Proof Palsu):** Manusia punya kecenderungan alami untuk ikut-ikutan jika melihat banyak orang lain sudah mencobanya. Penipu menyewa *click farms* (jaringan komputer massal) untuk membanjiri kolom komentar dengan pujian palsu agar kamu merasa aman.&lt;/li&gt;
+    &lt;li&gt;**Akun Zombie Buatan Robot:** Akun-akun bot ini dibuat secara otomatis menggunakan software generator khusus dalam jumlah ribuan sekaligus. Itulah alasan kenapa ketika dicek, tanggal pembuatan akun mereka sering kali sama persis.&lt;/li&gt;
+    &lt;li&gt;**Mengakali Algoritma:** Sistem YouTube otomatis merekomendasikan video yang mendapatkan interaksi cepat (banyak like dan komen dalam waktu singkat). Bot digunakan untuk &quot;menipu&quot; algoritma agar menyebarkan video scam tersebut ke beranda remaja-remaja lain.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+]
+(if: $achieve_yt is not true)[
+&lt;div style=&quot;background:#e2e3e5; color:#383d41; padding:15px; border-radius:8px; border:2px solid #d6d8db; margin-bottom:10px;&quot;&gt;
+  **🔒 [ Rahasia Terkunci ]**&lt;br&gt;
+  *Petunjuk: Selidiki jejak digital di Kasus 2 lebih dalam sebelum kamu men-download aplikasinya.*
+&lt;/div&gt;
+]
+
+---
+[[&lt;- Kembali ke Menu Utama-&gt;Main Menu]]
+]
+
+(if: $lang is &quot;en&quot;)[
+## 🏆 Achievements
+
+Here are the achievement badges you have collected during the simulation. Explore different choices in every case to uncover hidden secrets!
+
+---
+
+(if: $achieve_yt is true)[
+&lt;div style=&quot;background:#d4edda; color:#155724; padding:15px; border-radius:8px; border:2px solid #c3e6cb; margin-bottom:10px;&quot;&gt;
+  &lt;h3&gt;🏆 [Hidden YouTube Video]&lt;/h3&gt;
+  &lt;p&gt;*Successfully exposed a YouTube comment bot network.*&lt;/p&gt;
+  
+  &lt;hr style=&quot;border: 0; border-top: 1px dashed #155724;&quot;&gt;
+  
+  &lt;h4&gt;💡 Fun Fact: How Do Comment Bots Actually Trick Us?&lt;/h4&gt;
+  &lt;ul&gt;
+    &lt;li&gt;**Psychological Manipulation (Fake Social Proof):** Humans are naturally hardwired to trust a crowd. Scammers deploy automated scripts or &quot;click farms&quot; to manufacture thousands of positive comments so your brain drops its defenses.&lt;/li&gt;
+    &lt;li&gt;**Robot-Generated Zombie Accounts:** These user profiles are bought in bulk or generated simultaneously by specialized software, which is why they usually share identical account creation dates and have zero content.&lt;/li&gt;
+    &lt;li&gt;**Hijacking the Algorithm:** Video platforms automatically promote content that gets a sudden burst of high engagement. Scammers use bots to trick the algorithm into pushing the scam onto the feeds of thousands of real high schoolers.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+]
+(if: $achieve_yt is not true)[
+&lt;div style=&quot;background:#e2e3e5; color:#383d41; padding:15px; border-radius:8px; border:2px solid #d6d8db; margin-bottom:10px;&quot;&gt;
+  **🔒 [ Secret Locked ]**&lt;br&gt;
+  *Hint: Investigate the digital footprint in Case 2 deeper before downloading the app.*
+&lt;/div&gt;
+]
+
+---
+[[&lt;- Back to Main Menu-&gt;Main Menu]]
+]</tw-passagedata><tw-passagedata pid="5" name="Case 1 Intro" tags="" position="125,450" size="100,100">&lt;div class=&quot;game-narrative&quot;&gt;
   (if: $lang is &quot;id&quot;)[
     &lt;h2&gt;Kasus 1: Rezeki Nomplok Misterius&lt;/h2&gt;
     &lt;p&gt;Kamu baru saja pulang sekolah, melempar tas ke kasur, dan berniat mabar (main bareng) game di HP. Tiba-tiba, sebuah SMS masuk dari nomor tidak dikenal.&lt;/p&gt;
@@ -266,7 +323,7 @@ Choose your preferred simulation language:]
       (if: $lang is &quot;en&quot;)[[👉 Verify and inspect the link first -&gt; Case 1 Verify]]
     &lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="6" name=" Case 1 Ignore" tags="" position="75,525" size="100,100">(if: $lang is 0)[(set: $lang to &quot;id&quot;)]\
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="6" name=" Case 1 Ignore" tags="" position="0,600" size="100,100">(if: $lang is 0)[(set: $lang to &quot;id&quot;)]\
 (if: $lang is &quot;id&quot;)[
 ## Keputusan Tepat! (Abaikan)
 
@@ -294,7 +351,7 @@ High schoolers are prime targets because they often want extra spending money fo
 
 ---
 [[&lt;- Back to Main Menu-&gt;Main Menu]]
-]</tw-passagedata><tw-passagedata pid="7" name=" Case 1 Phishing Page" tags="" position="200,550" size="100,100">&lt;div class=&quot;game-narrative&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="7" name=" Case 1 Phishing Page" tags="" position="125,600" size="100,100">&lt;div class=&quot;game-narrative&quot;&gt;
   (if: $lang is &quot;id&quot;)[
     &lt;h3&gt;🌐 Membuka Browser...&lt;/h3&gt;
     &lt;p&gt;Kamu mengklik link tersebut. Browser HP-mu membuka sebuah situs web yang sekilas terlihat resmi dengan logo bank besar. Di halaman utama, terdapat formulir pencairan hadiah yang meminta data berikut:&lt;/p&gt;
@@ -325,7 +382,7 @@ High schoolers are prime targets because they often want extra spending money fo
       (if: $lang is &quot;en&quot;)[[👉 Fill in the data completely to claim the prize -&gt; Case 1 Submit Info]]
     &lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="8" name=" Case 1 Verify" tags="" position="425,550" size="100,100">## (if: $lang is &quot;id&quot;)[🔍 Melakukan Inspeksi Link](else:)[🔍 Inspecting the Connection Elements]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="8" name=" Case 1 Verify" tags="" position="275,600" size="100,100">## (if: $lang is &quot;id&quot;)[🔍 Melakukan Inspeksi Link](else:)[🔍 Inspecting the Connection Elements]
 
 (if: $lang is &quot;id&quot;)[
   &lt;p&gt;Kamu menahan diri dan meneliti alamat linknya: &lt;code&gt;http://bisa-jp-dana-undian99.com&lt;/code&gt;.&lt;/p&gt;
@@ -362,7 +419,7 @@ High schoolers are prime targets because they often want extra spending money fo
       (if: $lang is &quot;en&quot;)[[👉 Curious anyway: click the link just to see what happens -&gt; Case 1 Phishing Page]]
     &lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="9" name="User Init" tags="" position="650,175" size="100,100">(set: $lang to &quot;id&quot;)</tw-passagedata><tw-passagedata pid="10" name=" Case 1 Back Out" tags="" position="175,700" size="100,100">(if: $lang is 0)[(set: $lang to &quot;id&quot;)]\
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="9" name="User Init" tags="" position="225,175" size="100,100">(set: $lang to &quot;id&quot;)</tw-passagedata><tw-passagedata pid="10" name=" Case 1 Back Out" tags="" position="125,775" size="100,100">(if: $lang is 0)[(set: $lang to &quot;id&quot;)]\
 (if: $lang is &quot;id&quot;)[
 ## Selamat, Kamu Lolos dari Jebakan!
 
@@ -390,7 +447,7 @@ Rule of thumb: Never supply these private records to dubious web domains that la
 
 ---
 [[&lt;- Back to Main Menu-&gt;Main Menu]]
-]</tw-passagedata><tw-passagedata pid="11" name=" Case 1 Submit Info" tags="" position="300,675" size="100,100">(if: $lang is 0)[(set: $lang to &quot;id&quot;)]\
+]</tw-passagedata><tw-passagedata pid="11" name=" Case 1 Submit Info" tags="" position="275,750" size="100,100">(if: $lang is 0)[(set: $lang to &quot;id&quot;)]\
 (if: $lang is &quot;id&quot;)[
 ## 🔴 UANG KAMU DICURI!
 
@@ -417,6 +474,450 @@ A few hours later, your family realizes their bank accounts linked to that ident
 &gt; 1. **Freeze Accounts Instantly:** Call the financial provider immediately to terminate any active cards or digital banking credentials that were compromised.
 &gt; 2. **Report Identity Theft:** Inform cyber authorities through government reporting channels to flag your identity documents as stolen.
 &gt; 3. **Update Credentials:** Overhaul your passwords across all security nodes immediately.
+
+---
+[[&lt;- Back to Main Menu-&gt;Main Menu]]
+]</tw-passagedata><tw-passagedata pid="12" name=" Case 2 Intro" tags="" position="550,550" size="100,100">(if: $lang is 0)[(set: $lang to &quot;id&quot;)]
+
+(if: $lang is &quot;id&quot;)[
+## Kasus 2: Top-Up Game Murah &amp; APK Palsu
+
+Kamu sedang bermain game favoritmu, tapi kamu kehabisan *in-game currency* (Diamond/Gems) untuk membeli skin terbaru. Karena tidak punya uang jajan sisa, kamu mencari cara gratisan di internet.
+
+Kamu menemukan sebuah website yang menawarkan aplikasi &quot;Free Currency Generator&quot;. Website tersebut menyuruhmu mengunduh sebuah file aplikasi mentah berformat **.APK** langsung dari browser, bukan dari Google Play Store atau Apple App Store.
+
+&lt;div class=&quot;choice-container&quot;&gt;
+  &lt;div class=&quot;game-choices&quot;&gt;
+    &lt;div class=&quot;choice-box safe&quot;&gt;
+      [[👉 Sadar ini ide buruk. Jangan download dan tutup website tersebut!-&gt;Case 2 Delete Early]]
+    &lt;/div&gt;
+    &lt;div class=&quot;choice-box danger&quot;&gt;
+      [[👉 Wah lumayan gratis! Langsung download file APK tersebut ke HP-&gt;Case 2 Downloaded]]
+    &lt;/div&gt;
+    &lt;div class=&quot;choice-box report&quot;&gt;
+      [[👉 Cek dulu websitenya: Baca deskripsi dan jaminannya-&gt;Case 2 Analyze Web]]
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+]
+
+(if: $lang is &quot;en&quot;)[
+## Case 2: Free Game Currency &amp; Fake APKs
+
+You are playing your favorite mobile game, but you&#39;re out of in-game currency (Diamonds/Gems) to buy the newest skin. Since you don&#39;t have extra allowance, you search the internet for a free method.
+
+You find a website offering a &quot;Free Currency Generator&quot; app. The site tells you to download a raw application file (**an .APK file**) directly from your browser, completely bypassing the official Google Play Store or Apple App Store.
+
+&lt;div class=&quot;choice-container&quot;&gt;
+  &lt;div class=&quot;game-choices&quot;&gt;
+    &lt;div class=&quot;choice-box safe&quot;&gt;
+      [[👉 Realize this is a bad idea. Close the tab immediately!-&gt;Case 2 Delete Early]]
+    &lt;/div&gt;
+    &lt;div class=&quot;choice-box danger&quot;&gt;
+      [[👉 Free stuff? Awesome! Download the APK file directly to your phone-&gt;Case 2 Downloaded]]
+    &lt;/div&gt;
+    &lt;div class=&quot;choice-box report&quot;&gt;
+      [[👉 Analyze the situation: Read the website&#39;s description and claims-&gt;Case 2 Analyze Web]]
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+]</tw-passagedata><tw-passagedata pid="13" name="Case 2 Delete Early" tags="" position="425,675" size="100,100">(if: $lang is 0)[(set: $lang to &quot;id&quot;)]
+
+(if: $lang is &quot;id&quot;)[
+## Keputusan Cerdas!
+
+Kamu terhindar dari bencana besar. Aturan emas di internet adalah: **&quot;Jika sesuatu terlihat terlalu bagus untuk menjadi kenyataan (Too good to be true), itu pasti penipuan.&quot;**
+
+&gt; ### 🛑 Bahaya Tersembunyi File APK Sembarangan
+&gt; * **Malware &amp; Virus:** APK dari luar toko resmi sering kali disuntikkan program jahat. HP-mu bisa tiba-tiba melambat, cepat panas, dan dipenuhi iklan pop-up yang tidak bisa ditutup.
+&gt; * **Pencurian Data Latar Belakang:** Aplikasi ini berjalan diam-diam untuk mencuri foto, kontak, dan kata sandi perbankan orang tuamu jika mereka pernah login di HP tersebut.
+
+Tidak ada yang namanya aplikasi penghasil mata uang game gratis. Itu hanya umpan untuk membajak perangkatmu.
+
+---
+[[&lt;- Kembali ke Menu Utama-&gt;Main Menu]]
+]
+
+(if: $lang is &quot;en&quot;)[
+## Smart Decision!
+
+You avoided a total disaster. The golden rule of the internet is: **&quot;If it sounds too good to be true, it probably is.&quot;**
+
+&gt; ### 🛑 The Hidden Dangers of Random APK Files
+&gt; * **Malware &amp; Viruses:** APKs from outside official stores are frequently injected with malicious code. Your phone could suddenly slow down, overheat, and get spammed with uncloseable pop-up ads.
+&gt; * **Background Data Theft:** These apps run silently to harvest your photos, contacts, and even your parents&#39; banking passwords if they ever logged into your device.
+
+There is no such thing as a free game currency generator. It is purely bait to hijack your hardware.
+
+---
+[[&lt;- Back to Main Menu-&gt;Main Menu]]
+]</tw-passagedata><tw-passagedata pid="14" name="Case 2 Downloaded" tags="" position="550,675" size="100,100">(if: $lang is 0)[(set: $lang to &quot;id&quot;)]
+
+(if: $lang is &quot;id&quot;)[
+File `FreeDiamond_v9.apk` telah berhasil diunduh ke HP-mu. Saat kamu mencoba menginstalnya, HP-mu memunculkan peringatan sistem yang keras:
+
+**&quot;Instalasi dari Sumber Tidak Dikenal diblokir untuk melindungi ponsel Anda.&quot;**
+
+Kamu tahu cara mematikan sistem keamanan ini di pengaturan HP, tapi peringatan itu membuatmu sedikit ragu.
+
+&lt;div class=&quot;choice-container&quot;&gt;
+  &lt;div class=&quot;game-choices&quot;&gt;
+    &lt;div class=&quot;choice-box report&quot;&gt;
+      [[👉 Tanya pendapat kakakmu atau cari di Google dulu-&gt;Case 2 Ask Brother]]
+    &lt;/div&gt;
+    &lt;div class=&quot;choice-box report&quot;&gt;
+      [[👉 Analisis file aplikasinya sebelum dibuka-&gt;Case 2 Analyze App]]
+    &lt;/div&gt;
+    &lt;div class=&quot;choice-box danger&quot;&gt;
+      [[👉 Abaikan peringatan, matikan keamanan HP, dan BUKA APLIKASINYA-&gt;Case 2 Open App]]
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+]
+
+(if: $lang is &quot;en&quot;)[
+The file `FreeDiamond_v9.apk` has been successfully downloaded to your phone. When you try to install it, your phone throws a harsh system warning:
+
+**&quot;Install from Unknown Sources is blocked to protect your device.&quot;**
+
+You know how to bypass this security setting, but the warning makes you hesitate for a second.
+
+&lt;div class=&quot;choice-container&quot;&gt;
+  &lt;div class=&quot;game-choices&quot;&gt;
+    &lt;div class=&quot;choice-box report&quot;&gt;
+      [[👉 Ask your older brother or search Google for advice-&gt;Case 2 Ask Brother]]
+    &lt;/div&gt;
+    &lt;div class=&quot;choice-box report&quot;&gt;
+      [[👉 Analyze the app file properties before opening-&gt;Case 2 Analyze App]]
+    &lt;/div&gt;
+    &lt;div class=&quot;choice-box danger&quot;&gt;
+      [[👉 Ignore the warning, disable phone security, and OPEN THE APP-&gt;Case 2 Open App]]
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+]</tw-passagedata><tw-passagedata pid="15" name="Case 2 Analyze Web" tags="" position="675,675" size="100,100">(if: $lang is 0)[(set: $lang to &quot;id&quot;)]
+
+(if: $lang is &quot;id&quot;)[
+Situs ini terlihat cukup meyakinkan. Ada tulisan besar berwarna hijau: **&quot;100% AMAN - DIGUNAKAN OLEH 1 JUTA PEMAIN&quot;**. 
+
+Namun, jika diperhatikan lebih teliti, ada beberapa *typo* (salah ketik) di websitenya. Di bagian bawah halaman, terdapat video YouTube yang disematkan, menampilkan seseorang yang membuktikan bahwa aplikasi ini benar-benar berfungsi dan diamond-nya bertambah.
+
+&lt;div class=&quot;choice-container&quot;&gt;
+  &lt;div class=&quot;game-choices&quot;&gt;
+    &lt;div class=&quot;choice-box safe&quot;&gt;
+      [[👉 Terlalu mencurigakan. Batal download dan keluar-&gt;Case 2 Delete Early]]
+    &lt;/div&gt;
+    &lt;div class=&quot;choice-box danger&quot;&gt;
+      [[👉 Kayaknya aman kok. Langsung download APK-nya-&gt;Case 2 Downloaded]]
+    &lt;/div&gt;
+    &lt;div class=&quot;choice-box report&quot;&gt;
+      [[👉 Tonton video YouTube-nya untuk memastikan-&gt;Case 2 YouTube Video]]
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+]
+
+(if: $lang is &quot;en&quot;)[
+The site looks convincing at first glance. There is huge green text claiming: **&quot;100% SAFE - USED BY 1 MILLION PLAYERS&quot;**. 
+
+However, looking closely, the website has several spelling mistakes. At the bottom of the page, there is an embedded YouTube video showing a player proving that the app works and their game diamonds are increasing.
+
+&lt;div class=&quot;choice-container&quot;&gt;
+  &lt;div class=&quot;game-choices&quot;&gt;
+    &lt;div class=&quot;choice-box safe&quot;&gt;
+      [[👉 Too suspicious. Cancel the download and leave-&gt;Case 2 Delete Early]]
+    &lt;/div&gt;
+    &lt;div class=&quot;choice-box danger&quot;&gt;
+      [[👉 Seems safe enough. Download the APK file-&gt;Case 2 Downloaded]]
+    &lt;/div&gt;
+    &lt;div class=&quot;choice-box report&quot;&gt;
+      [[👉 Watch the YouTube video to be sure-&gt;Case 2 YouTube Video]]
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+]</tw-passagedata><tw-passagedata pid="16" name="Case 2 YouTube Video" tags="" position="675,800" size="100,100">(if: $lang is 0)[(set: $lang to &quot;id&quot;)]
+
+(if: $lang is &quot;id&quot;)[
+Video tersebut terlihat sangat meyakinkan. Seseorang menekan tombol &quot;Generate&quot;, dan tiba-tiba saldo game-nya bertambah drastis. 
+
+Kolom komentar dipenuhi oleh orang-reang yang memuji pembuat aplikasi:
+*&quot;Wah gila work banget bang!&quot;*
+*&quot;Terima kasih, akhirnya bisa beli skin!&quot;*
+Namun, ada satu atau dua komentar yang terkubur di bawah bertuliskan: *&quot;JANGAN DOWNLOAD, INI SCAM!&quot;*
+
+&lt;div class=&quot;choice-container&quot;&gt;
+  &lt;div class=&quot;game-choices&quot;&gt;
+    &lt;div class=&quot;choice-box safe&quot;&gt;
+      [[👉 Batal download. Komentar negatif itu peringatan nyata-&gt;Case 2 Delete Early]]
+    &lt;/div&gt;
+    &lt;div class=&quot;choice-box danger&quot;&gt;
+      [[👉 Banyak yang bilang berhasil! Download APK-nya sekarang-&gt;Case 2 Downloaded]]
+    &lt;/div&gt;
+    &lt;div class=&quot;choice-box report&quot;&gt;
+      [[👉 Inspeksi profil yang berkomentar lebih teliti-&gt;Case 2 Inspect Comments]]
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+]
+
+(if: $lang is &quot;en&quot;)[
+The video looks incredibly convincing. A user taps &quot;Generate,&quot; and their in-game balance skyrockets instantly. 
+
+The comment section is flooded with praise for the creator:
+*&quot;OMG it actually works bro!&quot;*
+*&quot;Thank you, I can finally buy the new skin!&quot;*
+However, one or two comments buried at the bottom say: *&quot;DO NOT DOWNLOAD, IT IS A SCAM!&quot;*
+
+&lt;div class=&quot;choice-container&quot;&gt;
+  &lt;div class=&quot;game-choices&quot;&gt;
+    &lt;div class=&quot;choice-box safe&quot;&gt;
+      [[👉 Cancel download. Those negative comments are a real warning-&gt;Case 2 Delete Early]]
+    &lt;/div&gt;
+    &lt;div class=&quot;choice-box danger&quot;&gt;
+      [[👉 Everyone says it works! Download the APK now-&gt;Case 2 Downloaded]]
+    &lt;/div&gt;
+    &lt;div class=&quot;choice-box report&quot;&gt;
+      [[👉 Inspect the commenting profiles more closely-&gt;Case 2 Inspect Comments]]
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+]</tw-passagedata><tw-passagedata pid="17" name="Case 2 Inspect Comments" tags="" position="675,925" size="100,100">(if: $lang is 0)[(set: $lang to &quot;id&quot;)]
+(if: $achieve_yt is not true)[(set: $achieve_yt to true)]
+
+&lt;div style=&quot;background:#fff3cd; color:#856404; padding:15px; border-radius:8px; border:2px solid #ffeeba; margin-bottom:20px; font-weight:bold;&quot;&gt;
+  🏆 ACHIEVEMENT UNLOCKED: [Hidden YouTube Video]&lt;br&gt;
+  (if: $lang is &quot;id&quot;)[Kamu berhasil membongkar jaringan bot komentar di YouTube.](if: $lang is &quot;en&quot;)[You successfully exposed a YouTube comment bot network.]
+&lt;/div&gt;
+
+(if: $lang is &quot;id&quot;)[
+Kamu mengeklik beberapa profil yang memuji video tersebut. Keanehan mulai terlihat: semua akun tersebut dibuat pada **hari yang sama**, tidak memiliki video sendiri, dan namanya menggunakan format angka acak misal: *GamerBoy49281*. Ini adalah **Bot Komentar**.
+
+Tiba-tiba, saat kamu me-refresh halaman web tersebut, video YouTube itu menghilang! Tertulis: *&quot;Video dihapus karena melanggar pedoman komunitas YouTube.&quot;*
+
+&lt;div class=&quot;choice-container&quot;&gt;
+  &lt;div class=&quot;game-choices&quot;&gt;
+    &lt;div class=&quot;choice-box safe&quot;&gt;
+      [[👉 Hapus dan lupakan. Ini 100% penipuan-&gt;Case 2 Delete Early]]
+    &lt;/div&gt;
+    &lt;div class=&quot;choice-box danger&quot;&gt;
+      [[👉 Ah mungkin YouTube salah deteksi. Tetap download APK-nya-&gt;Case 2 Downloaded]]
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+]
+
+(if: $lang is &quot;en&quot;)[
+You click on a few profiles praising the video. A creepy pattern emerges: all of these accounts were created on the **exact same day**, they have zero videos, and their names are randomized (e.g., *GamerBoy49281*). These are **Comment Bots**.
+
+Suddenly, you refresh the webpage, and the YouTube embed breaks! It now says: *&quot;This video has been removed for violating YouTube&#39;s Community Guidelines.&quot;*
+
+&lt;div class=&quot;choice-container&quot;&gt;
+  &lt;div class=&quot;game-choices&quot;&gt;
+    &lt;div class=&quot;choice-box safe&quot;&gt;
+      [[👉 Delete and forget it. This is a 100% scam-&gt;Case 2 Delete Early]]
+    &lt;/div&gt;
+    &lt;div class=&quot;choice-box danger&quot;&gt;
+      [[👉 YouTube probably made a mistake. Download the APK anyway-&gt;Case 2 Downloaded]]
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+]</tw-passagedata><tw-passagedata pid="18" name="Case 2 Ask Brother" tags="" position="300,925" size="100,100">(if: $lang is 0)[(set: $lang to &quot;id&quot;)]
+
+(if: $lang is &quot;id&quot;)[
+Kamu menghampiri kakakmu dan menunjukkan APK tersebut. Dia langsung panik.
+&quot;Hapus sekarang juga! Temenku bulan lalu kena ginian. HP-nya langsung nge-hang, isinya virus semua, dan akun game-nya yang udah level maksimal malah ke-hack dan dijual orang!&quot;
+
+&lt;div class=&quot;choice-container&quot;&gt;
+  &lt;div class=&quot;game-choices&quot;&gt;
+    &lt;div class=&quot;choice-box safe&quot;&gt;
+      [[👉 Dengarkan peringatannya dan hapus file APK-nya-&gt;Case 2 Delete After Warning]]
+    &lt;/div&gt;
+    &lt;div class=&quot;choice-box danger&quot;&gt;
+      [[👉 Kakak sok tahu, pasti aplikasinya beda. Buka saja!-&gt;Case 2 Open App]]
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+]
+
+(if: $lang is &quot;en&quot;)[
+You walk over to your older brother and show him the APK. He immediately panics.
+&quot;Delete that right now! My friend fell for this last month. His phone got infected with malware, and his max-level game account got hijacked and sold on the internet!&quot;
+
+&lt;div class=&quot;choice-container&quot;&gt;
+  &lt;div class=&quot;game-choices&quot;&gt;
+    &lt;div class=&quot;choice-box safe&quot;&gt;
+      [[👉 Listen to his warning and delete the APK file-&gt;Case 2 Delete After Warning]]
+    &lt;/div&gt;
+    &lt;div class=&quot;choice-box danger&quot;&gt;
+      [[👉 He doesn&#39;t know what he&#39;s talking about. Open it anyway!-&gt;Case 2 Open App]]
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+]</tw-passagedata><tw-passagedata pid="19" name="Case 2 Analyze App" tags="" position="425,925" size="100,100">(if: $lang is 0)[(set: $lang to &quot;id&quot;)]
+
+(if: $lang is &quot;id&quot;)[
+Kamu mengecek daftar &quot;Izin Aplikasi&quot; (App Permissions) yang diminta oleh file APK ini sebelum menginstalnya. 
+
+Kamu menyadari keanehan total: Aplikasi ini meminta izin untuk membaca SMS, membaca Kontak HP, dan mengakses Kamera/Mikrofon. Kenapa sebuah aplikasi *generator diamond game* butuh membaca isi pesan WhatsApp dan SMS-mu?
+
+&lt;div class=&quot;choice-container&quot;&gt;
+  &lt;div class=&quot;game-choices&quot;&gt;
+    &lt;div class=&quot;choice-box safe&quot;&gt;
+      [[👉 Ini pencurian data. Hapus aplikasinya!-&gt;Case 2 Delete Early]]
+    &lt;/div&gt;
+    &lt;div class=&quot;choice-box danger&quot;&gt;
+      [[👉 Izinkan semuanya saja demi diamond gratis! Buka aplikasinya-&gt;Case 2 Open App]]
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+]
+
+(if: $lang is &quot;en&quot;)[
+You check the &quot;App Permissions&quot; list requested by this APK file before installing it. 
+
+You spot massive red flags: The app is requesting permission to read your SMS messages, view your Contacts, and access your Camera/Microphone. Why would a *game diamond generator* need to read your private text messages?
+
+&lt;div class=&quot;choice-container&quot;&gt;
+  &lt;div class=&quot;game-choices&quot;&gt;
+    &lt;div class=&quot;choice-box safe&quot;&gt;
+      [[👉 This is literal data theft. Delete the app!-&gt;Case 2 Delete Early]]
+    &lt;/div&gt;
+    &lt;div class=&quot;choice-box danger&quot;&gt;
+      [[👉 Just allow all permissions for the free diamonds! Open the app-&gt;Case 2 Open App]]
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+]</tw-passagedata><tw-passagedata pid="20" name="Case 2 Open App" tags="" position="550,925" size="100,100">(if: $lang is 0)[(set: $lang to &quot;id&quot;)]
+
+(if: $lang is &quot;id&quot;)[
+Kamu mematikan keamanan HP dan membuka aplikasinya. Layar menunjukkan logo game favoritmu yang terlihat pecah (kualitas rendah).
+
+Muncul sebuah formulir yang wajib diisi agar diamond bisa dikirim:
+1. **Username Game**
+2. **Password Akun Game**
+3. **Nomor HP Akun Google / Email**
+4. **Password Email Kamu**
+
+Ada peringatan kecil: *&quot;Kami butuh password email Anda untuk memverifikasi bahwa Anda bukan robot.&quot;*
+
+&lt;div class=&quot;choice-container&quot;&gt;
+  &lt;div class=&quot;game-choices&quot;&gt;
+    &lt;div class=&quot;choice-box safe&quot;&gt;
+      [[👉 Sadar ini adalah penipuan tingkat tinggi. Keluar dan hapus aplikasinya!-&gt;Case 2 Delete App]]
+    &lt;/div&gt;
+    &lt;div class=&quot;choice-box danger&quot;&gt;
+      [[👉 Isi semua password demi hadiah diamond gratis-&gt;Case 2 Fill Info]]
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+]
+
+(if: $lang is &quot;en&quot;)[
+You disable your phone&#39;s security and open the app. The screen displays the logo of your favorite game, but it looks pixelated and low-quality.
+
+A mandatory form appears, claiming it needs your info to send the diamonds:
+1. **Game Username**
+2. **Game Account Password**
+3. **Google Account Phone Number / Email**
+4. **Your Email Password**
+
+There is a small note at the bottom: *&quot;We require your email password to verify you are a real human and not a robot.&quot;*
+
+&lt;div class=&quot;choice-container&quot;&gt;
+  &lt;div class=&quot;game-choices&quot;&gt;
+    &lt;div class=&quot;choice-box safe&quot;&gt;
+      [[👉 Realize this is a massive scam. Close the app and delete it!-&gt;Case 2 Delete App]]
+    &lt;/div&gt;
+    &lt;div class=&quot;choice-box danger&quot;&gt;
+      [[👉 Fill in all your passwords to get the free diamonds-&gt;Case 2 Fill Info]]
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+]</tw-passagedata><tw-passagedata pid="21" name="Case 2 Delete After Warning" tags="" position="300,1050" size="100,100">(if: $lang is 0)[(set: $lang to &quot;id&quot;)]
+
+(if: $lang is &quot;id&quot;)[
+## Selamat! Bertanya Menyelamatkanmu.
+
+Mendengarkan peringatan dari orang yang lebih berpengalaman (atau mengeceknya di Google) adalah salah satu *skill* keamanan siber terbaik yang bisa dimiliki remaja.
+
+&gt; ### 🛑 Cara Kerja Penipuan APK
+&gt; Aplikasi penipuan sering kali dirancang sangat mirip dengan aslinya. Begitu kamu memberikan izin akses ke sistem HP-mu (seperti membaca SMS), *hacker* bisa menggunakan fitur itu untuk membobol akun media sosialmu dengan mencuri kode OTP (One Time Password) yang dikirim lewat SMS!
+
+Jangan pernah malu untuk bertanya jika kamu menemukan sesuatu yang menjanjikan &quot;hadiah gratis&quot; di internet.
+
+---
+[[&lt;- Kembali ke Menu Utama-&gt;Main Menu]]
+]
+
+(if: $lang is &quot;en&quot;)[
+## Good Job! Asking Saved You.
+
+Listening to warnings from older peers (or fact-checking on Google) is one of the absolute best cybersecurity skills a teenager can have.
+
+&gt; ### 🛑 How APK Scams Actually Work
+&gt; Scam applications are designed to look identical to official tools. The moment you grant them system permissions (like reading your SMS), a hacker can use that feature to steal OTP (One Time Password) codes sent to your phone, instantly hacking your social media!
+
+Never be afraid to ask for a second opinion when you find something promising &quot;free rewards&quot; online.
+
+---
+[[&lt;- Back to Main Menu-&gt;Main Menu]]
+]</tw-passagedata><tw-passagedata pid="22" name="Case 2 Delete App" tags="" position="487.5,1050" size="100,100">(if: $lang is 0)[(set: $lang to &quot;id&quot;)]
+
+(if: $lang is &quot;id&quot;)[
+## Nyaris Saja!
+
+Kamu sadar tepat pada waktunya dan menghapus aplikasi tersebut. Meminta password Google/Email adalah batas merah mutlak yang tidak boleh dilanggar.
+
+&gt; ### 🛑 Kenapa Meminta Password Email Sangat Bahaya?
+&gt; Developer game asli **tidak akan pernah** meminta password emailmu. Emailmu adalah &quot;kunci master&quot;. Jika penipu mendapatkan password emailmu, mereka bisa menekan fitur *Lupa Password* di semua akunmu yang lain (Instagram, TikTok, Game), lalu menggunakan emailmu untuk mengambil alih semuanya secara permanen.
+
+Selalu rahasiakan password-mu, bahkan dari teman terdekatmu sekalipun!
+
+---
+[[&lt;- Kembali ke Menu Utama-&gt;Main Menu]]
+]
+
+(if: $lang is &quot;en&quot;)[
+## That Was Too Close!
+
+You came to your senses right at the last second and wiped the app. Asking for your Google/Email password is the absolute ultimate red flag.
+
+&gt; ### 🛑 Why is Giving Your Email Password So Dangerous?
+&gt; Real game developers will **never** ask for your email password. Your email is your digital &quot;Master Key.&quot; If a scammer has your email password, they can click *Forgot Password* on every other account you own (Instagram, TikTok, Games), and use your email to hijack all of them permanently.
+
+Keep your passwords completely secret, even from your best friends!
+
+---
+[[&lt;- Back to Main Menu-&gt;Main Menu]]
+]</tw-passagedata><tw-passagedata pid="23" name="Case 2 Fill Info" tags="" position="612.5,1050" size="100,100">(if: $lang is 0)[(set: $lang to &quot;id&quot;)]
+
+(if: $lang is &quot;id&quot;)[
+## 🔴 AKUN &amp; DATAMU HANGUS!
+
+Begitu kamu menekan submit, aplikasinya langsung *force close* (tertutup otomatis). Diamond tidak pernah masuk. 
+
+Setengah jam kemudian, kamu otomatis ter-logout dari HP-mu sendiri. Penipu tersebut menggunakan password Google-mu untuk mengambil alih emailmu, lalu membajak akun game-mu, mengubah semua kata sandi, dan menjual akun yang sudah susah payah kamu mainkan bertahun-tahun di forum hacker. Lebih parah lagi, kartu kredit orang tuamu yang tersambung ke Google Play juga dikuras.
+
+&gt; ### 🚨 Apa yang Harus Dilakukan Jika Terlanjur Kena?
+&gt; 1. Segera pinjam HP/Laptop lain, buka akun Google, dan **Ganti Password** sebelum hacker sempat mengubahnya.
+&gt; 2. Nyalakan **Autentikasi Dua Langkah (2FA)** di semua akunmu (Game, IG, TikTok, Google) agar hacker tidak bisa masuk meskipun tahu password-mu.
+&gt; 3. Lapor ke developer game resmi agar akunmu diblokir sementara sampai bisa diselamatkan.
+
+---
+[[&lt;- Kembali ke Menu Utama-&gt;Main Menu]]
+]
+
+(if: $lang is &quot;en&quot;)[
+## 🔴 YOU LOST EVERYTHING!
+
+The moment you hit submit, the app instantly force-closes. The diamonds never arrive. 
+
+Half an hour later, you are suddenly logged out of your own phone. The scammer used your Google password to completely lock you out of your email. They hijacked your game account, changed the passwords, and sold all the progress you spent years building on a hacker forum. Worse, they drained the credit card your parents connected to your Google Play account.
+
+&gt; ### 🚨 What To Do If You Make This Mistake in Real Life:
+&gt; 1. Immediately borrow another phone/laptop, log into your Google account, and **Change Your Password** before the hacker changes it first.
+&gt; 2. Turn on **Two-Factor Authentication (2FA)** on everything (Games, IG, TikTok, Google) so hackers can&#39;t log in even if they steal your password.
+&gt; 3. Report the hack to the official game developers so they can freeze your account to save it.
 
 ---
 [[&lt;- Back to Main Menu-&gt;Main Menu]]
